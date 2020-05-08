@@ -318,10 +318,10 @@ This plugin requires various trackers to be backported to maintain the plugin fu
 |------------------|-------------------|-----------------|
 | Moodle 3.9       |                   |                 |
 | Moodle 3.8       | MDL-58281         | MDL-68342       |
-| Moodle 3.4 - 3.7 | MDL-58281         | MDL-68342<br>MDL-66304 |
-| Moodle 3.3       | MDL-58281         | MDL-68342<br>MDL-53240<br>MDL-66304 |
-| Moodle 2.9 - 3.2 | MDL-58281<br>MDL-46375<br>MDL-58068<br>MDL-58684<br>MDL-58297 | MDL-68342<br>MDL-53240<br>MDL-66304 |
-| Moodle 2.7 - 2.8 | MDL-58281<br>MDL-46375<br>MDL-58068<br>MDL-49627<br>MDL-58684<br>MDL-58297 | MDL-68342<br>MDL-53240<br>MDL-66304 |
+| Moodle 3.4 - 3.7 | MDL-58281         | MDL-68342, MDL-66304 |
+| Moodle 3.3       | MDL-58281         | MDL-68342, MDL-53240,<br>MDL-66304 |
+| Moodle 2.9 - 3.2 | MDL-58281, MDL-46375,<br>MDL-58068, MDL-58684,<br>MDL-58297 | MDL-68342, MDL-53240,<br>MDL-66304 |
+| Moodle 2.7 - 2.8 | MDL-58281, MDL-46375,<br>MDL-58068, MDL-49627,<br>MDL-58684, MDL-58297 | MDL-68342, MDL-53240,<br>MDL-66304 |
 
 #### Moodle 3.8:
 Apply the patch:
