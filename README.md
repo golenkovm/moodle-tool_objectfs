@@ -314,20 +314,31 @@ Openstack Object Storage settings
 
 This plugin requires various trackers to be backported to maintain the plugin functionality.
 
-| Moodle version   | Mandatory patches | Optimization  | Pre-signed URLs |
-|------------------|-------------------|---------------|-----------------|
-| Moodle 3.9       |                   |               |                 |
-| Moodle 3.8       | MDL-58281         | MDL-68342     |                 |
-| Moodle 3.4 - 3.7 | MDL-58281         | MDL-68342     | MDL-66304       |
-| Moodle 3.3       | MDL-58281         | MDL-68342     | MDL-53240<br>MDL-66304 |
-| Moodle 2.9 - 3.2 | MDL-58281<br>MDL-46375<br>MDL-58068<br>MDL-58684<br>MDL-58297 | MDL-68342 | MDL-53240<br>MDL-66304 |
-| Moodle 2.7 - 2.8 | MDL-58281<br>MDL-46375<br>MDL-58068<br>MDL-49627<br>MDL-58684<br>MDL-58297 | MDL-68342 | MDL-53240<br>MDL-66304 |
-
-#### Moodle 3.9:
-TBA
+| Moodle version   | Mandatory patches | Pre-signed URLs |
+|------------------|-------------------|-----------------|
+| Moodle 3.9       |                   |                 |
+| Moodle 3.8       | MDL-58281         | MDL-68342       |
+| Moodle 3.4 - 3.7 | MDL-58281         | MDL-68342<br>MDL-66304 |
+| Moodle 3.3       | MDL-58281         | MDL-68342<br>MDL-53240<br>MDL-66304 |
+| Moodle 2.9 - 3.2 | MDL-58281<br>MDL-46375<br>MDL-58068<br>MDL-58684<br>MDL-58297 | MDL-68342<br>MDL-53240<br>MDL-66304 |
+| Moodle 2.7 - 2.8 | MDL-58281<br>MDL-46375<br>MDL-58068<br>MDL-49627<br>MDL-58684<br>MDL-58297 | MDL-68342<br>MDL-53240<br>MDL-66304 |
 
 #### Moodle 3.8:
-TBA
+Apply the patch:
+<pre>
+git am --whitespace=nowarn < admin/tool/objectfs/patch/core38.diff
+</pre>
+The patch was created with following commands: 
+<pre>
+// Cherry-pick MDL-58281
+git cherry-pick 1fef1de5922f7ea130e4994b3453610079874b63
+
+// Cherry-pick MDL-68342
+git cherry-pick 5bf5a7aaebabff669a674f19a4ec33cbca24f515
+
+// Create the patch
+git format-patch MOODLE_38_STABLE --stdout > core38.diff
+</pre>
 
 #### Moodle 3.4 - 3.7:
 TBA
