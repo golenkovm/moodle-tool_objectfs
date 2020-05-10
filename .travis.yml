@@ -86,7 +86,7 @@ before_install:
       sudo /etc/init.d/postgresql stop;
       sudo /etc/init.d/postgresql start 9.5;
     fi
-  - if [ "$MOODLE_VERSION" = "master" ] || [ "$MOODLE_VERSION" -ge 32 ]; then export CI=2; else export CI=1; fi
+  - if [ "$MOODLE_VERSION" = "master" ] || [ "$MOODLE_VERSION" -ge 30 ]; then export CI=2; else export CI=1; fi
   - echo $CI
   - phpenv config-rm xdebug.ini
   - cd ../..
